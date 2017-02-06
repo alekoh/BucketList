@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="root@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="flask">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cleaning"/>
+    <schema id="4" parent="1" name="consult"/>
+    <schema id="5" parent="1" name="dionis"/>
+    <schema id="6" parent="1" name="exam"/>
+    <schema id="7" parent="1" name="filmsite"/>
+    <schema id="8" parent="1" name="homestead"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="laravel"/>
+    <schema id="11" parent="1" name="martin"/>
+    <schema id="12" parent="1" name="mydb"/>
+    <schema id="13" parent="1" name="mysql"/>
+    <schema id="14" parent="1" name="news"/>
+    <schema id="15" parent="1" name="oriflame"/>
+    <schema id="16" parent="1" name="performance_schema"/>
+    <schema id="17" parent="1" name="php"/>
+    <schema id="18" parent="1" name="phpmyadmin"/>
+    <schema id="19" parent="1" name="silvia"/>
+    <schema id="20" parent="1" name="studenti"/>
+    <schema id="21" parent="1" name="test"/>
+    <schema id="22" parent="1" name="testingjoins"/>
+    <schema id="23" parent="1" name="theman"/>
+    <schema id="24" parent="1" name="working"/>
+    <schema id="25" parent="1" name="shop"/>
+    <table id="26" parent="2" name="tbl_user"/>
+    <table id="27" parent="2" name="tbl_wish"/>
+    <routine id="28" parent="2" name="sp_createUser">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="29" parent="2" name="sp_validateLogin">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="30" parent="2" name="sp_addWish">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="31" parent="26" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="26" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="33" parent="26" name="user_username">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="34" parent="26" name="user_password">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="35" parent="26" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="27" name="wish_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="27" name="wish_title">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="38" parent="27" name="wish_description">
+      <Position>3</Position>
+      <DataType>varchar(5000)|0</DataType>
+    </column>
+    <column id="39" parent="27" name="wish_user_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="40" parent="27" name="wish_date">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="41" parent="27" name="PRIMARY">
+      <ColNames>wish_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="42" parent="28" name="p_name">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="43" parent="28" name="p_username">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="44" parent="28" name="p_password">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="45" parent="29" name="p_username">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="46" parent="30" name="p_title">
+      <DataType>varchar(45)|0</DataType>
+    </argument>
+    <argument id="47" parent="30" name="p_description">
+      <DataType>varchar(1000)|0</DataType>
+    </argument>
+    <argument id="48" parent="30" name="p_user_id">
+      <DataType>bigint(20)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
